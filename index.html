@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wapper-content">
+      <!-- Main navigation -->
+      <nav id="main-nav">
+        <ul>
+          <li><a>Trang chủ</a></li>
+          <li>
+            <a>Quản lý công việc</a>
+            <ul class="sub-nav">
+              <li><a>Xem danh sách công việc</a></li>
+              <li><a>Tạo mới công việc</a></li>
+              <li><a>Xem danh sách mẫu công việc</a></li>
+              <li><a>Tạo mẫu công việc</a></li>
+            </ul>
+          </li>
+          <li><a>Quản lý nhóm</a></li>
+          <li><a>Quản lý quy trình</a></li>
+          <li><a>Lịch làm việc</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main content -->
+      <div class="main-content">
+        <div class="create-new-job">
+          <!-- Pop-up form -->
+          <div class="btn-list">
+            <button>Lưu</button>
+            <button>Hủy</button>
+            <button>X</button>
+          </div>
+          <div>
+            <label>Tên công việc </label>
+            <input type="text" placeholder="Công việc 1.2" />
+          </div>
+          <div>
+            <label>Mô tả</label>
+            <textarea>What is important for people to know?</textarea>
+          </div>
+
+          <div>
+            <label>Những vị trị nhân viên có quyên xem mẫu này</label>
+            <input type="text" placeholder="Nhân viên" />
+          </div>
+          <div>
+            <label>Ngừơi thực hiện</label>
+            <input type="text" placeholder="Đức" />
+          </div>
+          <div>
+            <label>Người phê duyệt</label>
+            <input type="text" placeholder="Nguyễn" />
+          </div>
+          <div>
+            <label>Người quan sát</label>
+            <input type="text" placeholder="Minh" />
+          </div>
+
+          <!-- Activity form -->
+
+          <div class="activity-form">
+            <label>Hoạt động</label>
+            <div>
+              <div>
+                <label>Bắt buộc</label>
+                <input type="checkbox" value="true" />
+              </div>
+              <div>
+                <label>Tên hoạt động</label>
+                <input type="text" placeholder="Báo cáo" />
+              </div>
+              <div>
+                <label>Mô tả</label>
+                <textarea>Nộp báo cáo tìm hiểu</textarea>
+
+                <button>Lưu</button>
+              </div>
+              <table>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên hoạt động</th>
+                  <th>Mô tả</th>
+                  <th>Bất buộc</th>
+                  <th>hành động</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Hoạt động 1</td>
+                  <td>Hoạt động 1 - báo cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Hoạt động 2</td>
+                  <td>Hoạt động 2 - báo cáo</td>
+                  <td>Không</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Hoạt động 3</td>
+                  <td>Hoạt động 3 - báo cáo</td>
+                  <td>Không</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Hoạt động 4</td>
+                  <td>Hoạt động 4 - baó cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hoạt động 5</td>
+                  <td>Hoạt động 5 - baó cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Hoạt động 6</td>
+                  <td>Hoạt động 6 - baó cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- Information form -->
+          <div class="information-form">
+            <label>Thông tin</label>
+            <div>
+              <div>
+                <label>Bắt buộc</label>
+                <input type="checkbox" value="true" />
+              </div>
+              <div>
+                <label>Tên thông tin</label>
+                <input type="text" placeholder="Số báo cáo nộp" />
+              </div>
+              <div>
+                <label>Mô tả</label>
+                <textarea>Số báo cáo nộp</textarea>
+              </div>
+              <div>
+                <label>Kiểu dữ liệu</label>
+                <select>
+                  <option value="vanban">Văn bản</option>
+                  <option value="so">Số</option>
+                  <option value="hinhanh">Hình ảnh</option>
+                </select>
+                <button>Lưu</button>
+              </div>
+              <table>
+                <tr>
+                  <th>STT</th>
+                  <th>Tên hoạt động</th>
+                  <th>Mô tả</th>
+                  <th>Bất buộc</th>
+                  <th>hành động</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Hoạt động 1</td>
+                  <td>Hoạt động 1 - báo cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Hoạt động 2</td>
+                  <td>Hoạt động 2 - báo cáo</td>
+                  <td>Không</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Hoạt động 3</td>
+                  <td>Hoạt động 3 - báo cáo</td>
+                  <td>Không</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Hoạt động 4</td>
+                  <td>Hoạt động 4 - báo cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Hoạt động 5</td>
+                  <td>Hoạt động 5 - báo cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Hoạt động 6</td>
+                  <td>Hoạt động 6 - báo cáo</td>
+                  <td>Có</td>
+                  <td>Icons</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- form footer -->
+          <div>
+            <label>Công thức tính điểm KPI công việc</label>
+            <textarea>
+100*(1 - (TT1/TT2) - (TT3/TT4) - (DO/D) - (AD/A))</textarea
+            >
+            <div class="notice">
+              <p>Trong công thức có thể dùng theemc ác tham số tự động sau</p>
+              <p>D: Tổng số ngày thực hiện công việc (Trừ CN)</p>
+              <p>DO: Số ngày quá hạn</p>
+              <p>A: Tổng số action</p>
+              <p>AD: Tổng số lần duyệt "Chưa Đạt" choc ác action</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

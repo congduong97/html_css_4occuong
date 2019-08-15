@@ -1,0 +1,65 @@
+/* ====Reset css===== */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ======== Main menu styles ========== */
+
+#main-nav {
+  margin-top: 10px;
+}
+
+#main-nav ul {
+  background: #a3daf0;
+  list-style-type: none;
+  display: flex;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.86);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.86);
+  box-shadow: 0px 2px 6px 0px rgba(50, 50, 50, 0.86);
+}
+
+#main-nav li {
+  padding: 5px 0;
+  position: relative;
+}
+
+#main-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 10px 15px;
+  font-weight: 700;
+}
+
+#main-nav a:hover {
+  background: #e87bb0;
+  cursor: pointer;
+}
+
+/* =========== Sub menu styles ======== */
+#main-nav .sub-nav {
+  display: none;
+  position: absolute;
+  width: 230px;
+  top: 52px;
+  left: 70px;
+  border-radius: 6px;
+}
+
+#main-nav .sub-nav li {
+  padding: 5px;
+}
+
+#main-nav .sub-nav li a {
+  border-radius: 6px;
+}
+
+#main-nav li:hover .sub-nav {
+  display: block;
+  cursor: pointer;
+}
