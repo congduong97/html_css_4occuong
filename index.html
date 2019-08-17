@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c05065f064.js"></script>
   </head>
   <body>
     <div id="wapper-content">
@@ -33,54 +34,77 @@
         <div class="create-new-job">
           <!-- Pop-up form -->
           <div class="btn-list">
-            <button>Lưu</button>
-            <button>Hủy</button>
-            <button>X</button>
+            <button class="btn btn-save">Lưu</button>
+            <button class="btn btn-cancel">Hủy</button>
+            <button class="btn btn-cancel">
+              <i class="fas fa-times-circle"></i>
+            </button>
           </div>
           <div>
-            <label>Tên công việc </label>
-            <input type="text" placeholder="Công việc 1.2" />
+            <div class="label required">Tên công việc</div>
+            <div>
+              <input type="text" placeholder="Công việc 1.2" size="30" />
+            </div>
           </div>
           <div>
-            <label>Mô tả</label>
-            <textarea>What is important for people to know?</textarea>
+            <div class="label">Mô tả</div>
+            <div>
+              <input
+                placeholder="What is important for people to know?"
+                type="text"
+                size="30"
+              />
+            </div>
           </div>
 
           <div>
-            <label>Những vị trị nhân viên có quyên xem mẫu này</label>
-            <input type="text" placeholder="Nhân viên" />
+            <div class="label required">
+              Những vị trị nhân viên có quyên xem mẫu này
+            </div>
+            <div><input type="text" placeholder="Nhân viên" size="30" /></div>
           </div>
           <div>
-            <label>Ngừơi thực hiện</label>
-            <input type="text" placeholder="Đức" />
+            <div class="label required">Ngừơi thực hiện</div>
+            <div><input type="text" placeholder="Đức" size="30" /></div>
           </div>
           <div>
-            <label>Người phê duyệt</label>
-            <input type="text" placeholder="Nguyễn" />
+            <div class="label required">Người phê duyệt</div>
+            <div><input type="text" placeholder="Nguyễn" size="30" /></div>
           </div>
           <div>
-            <label>Người quan sát</label>
-            <input type="text" placeholder="Minh" />
+            <div class="label">Người quan sát</div>
+            <div><input type="text" placeholder="Minh" size="30" /></div>
           </div>
 
           <!-- Activity form -->
 
           <div class="activity-form">
-            <label>Hoạt động</label>
-            <div>
-              <div>
-                <label>Bắt buộc</label>
-                <input type="checkbox" value="true" />
-              </div>
-              <div>
-                <label>Tên hoạt động</label>
-                <input type="text" placeholder="Báo cáo" />
-              </div>
-              <div>
-                <label>Mô tả</label>
-                <textarea>Nộp báo cáo tìm hiểu</textarea>
-
-                <button>Lưu</button>
+            <div class="label">Hoạt động</div>
+            <div class="grey-ground">
+              <div class="input-info">
+                <div>
+                  <div class="label">Bắt buộc</div>
+                  <div>
+                    <input type="checkbox" value="true" class="in-grey" />
+                  </div>
+                </div>
+                <div>
+                  <div class="label">Tên hoạt động</div>
+                  <div>
+                    <input type="text" placeholder="Báo cáo" class="in-grey" />
+                  </div>
+                </div>
+                <div class="row-input">
+                  <div class="label">Mô tả</div>
+                  <div>
+                    <input
+                      placeholder="Nộp báo cáo tìm hiểu"
+                      type="text"
+                      class="in-grey"
+                    />
+                  </div>
+                  <button class="btn btn-save">Lưu</button>
+                </div>
               </div>
               <table>
                 <tr>
@@ -95,42 +119,54 @@
                   <td>Hoạt động 1</td>
                   <td>Hoạt động 1 - báo cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>Hoạt động 2</td>
                   <td>Hoạt động 2 - báo cáo</td>
                   <td>Không</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>Hoạt động 3</td>
                   <td>Hoạt động 3 - báo cáo</td>
                   <td>Không</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>Hoạt động 4</td>
                   <td>Hoạt động 4 - baó cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>5</td>
                   <td>Hoạt động 5</td>
                   <td>Hoạt động 5 - baó cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>6</td>
                   <td>Hoạt động 6</td>
                   <td>Hoạt động 6 - baó cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -138,28 +174,48 @@
 
           <!-- Information form -->
           <div class="information-form">
-            <label>Thông tin</label>
-            <div>
-              <div>
-                <label>Bắt buộc</label>
-                <input type="checkbox" value="true" />
-              </div>
-              <div>
-                <label>Tên thông tin</label>
-                <input type="text" placeholder="Số báo cáo nộp" />
-              </div>
-              <div>
-                <label>Mô tả</label>
-                <textarea>Số báo cáo nộp</textarea>
-              </div>
-              <div>
-                <label>Kiểu dữ liệu</label>
-                <select>
-                  <option value="vanban">Văn bản</option>
-                  <option value="so">Số</option>
-                  <option value="hinhanh">Hình ảnh</option>
-                </select>
-                <button>Lưu</button>
+            <div class="label">Thông tin</div>
+            <div class="grey-ground">
+              <div class="input-info">
+                <div>
+                  <div class="label">Bắt buộc</div>
+                  <input
+                    type="checkbox"
+                    value="true"
+                    type="text"
+                    class="in-grey"
+                  />
+                </div>
+                <div>
+                  <div class="label">Tên thông tin</div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Số báo cáo nộp"
+                      class="in-grey"
+                    />
+                  </div>
+                </div>
+                <div class="row-input">
+                  <div class="label">Mô tả</div>
+                  <div>
+                    <input
+                      placeholder="Số báo cáo nộp"
+                      type="text"
+                      class="in-grey"
+                    />
+                  </div>
+                  <button class="btn btn-save">Lưu</button>
+                </div>
+                <div class="row-input">
+                  <div>Kiểu dữ liệu</div>
+                  <select>
+                    <option value="vanban">Văn bản</option>
+                    <option value="so">Số</option>
+                    <option value="hinhanh">Hình ảnh</option>
+                  </select>
+                  <button class="btn btn-save">Lưu</button>
+                </div>
               </div>
               <table>
                 <tr>
@@ -174,63 +230,80 @@
                   <td>Hoạt động 1</td>
                   <td>Hoạt động 1 - báo cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>Hoạt động 2</td>
                   <td>Hoạt động 2 - báo cáo</td>
                   <td>Không</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>Hoạt động 3</td>
                   <td>Hoạt động 3 - báo cáo</td>
                   <td>Không</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>Hoạt động 4</td>
                   <td>Hoạt động 4 - báo cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>5</td>
                   <td>Hoạt động 5</td>
                   <td>Hoạt động 5 - báo cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
                 <tr>
                   <td>6</td>
                   <td>Hoạt động 6</td>
                   <td>Hoạt động 6 - báo cáo</td>
                   <td>Có</td>
-                  <td>Icons</td>
+                  <td>
+                    <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
+                  </td>
                 </tr>
               </table>
             </div>
-          </div>
-        </div>
-        <div>
-          <!-- form footer -->
-          <div>
-            <label>Công thức tính điểm KPI công việc</label>
-            <textarea>
-100*(1 - (TT1/TT2) - (TT3/TT4) - (DO/D) - (AD/A))</textarea
-            >
-            <div class="notice">
-              <p>Trong công thức có thể dùng theemc ác tham số tự động sau</p>
-              <p>D: Tổng số ngày thực hiện công việc (Trừ CN)</p>
-              <p>DO: Số ngày quá hạn</p>
-              <p>A: Tổng số action</p>
-              <p>AD: Tổng số lần duyệt "Chưa Đạt" choc ác action</p>
+            <div>
+              <div class="label">Công thức tính điểm KPI công việc</div>
+              <div>
+                <input
+                  type="text"
+                  placeholder="100*(1 - (TT1/TT2) - (TT3/TT4) - (DO/D) - (AD/A))"
+                />
+              </div>
+
+              <div class="notice">
+                <p>
+                  Trong công thức có thể dùng theemc ác tham số tự động sau
+                </p>
+                <p>D: Tổng số ngày thực hiện công việc (Trừ CN)</p>
+                <p>DO: Số ngày quá hạn</p>
+                <p>A: Tổng số action</p>
+                <p>AD: Tổng số lần duyệt "Chưa Đạt" choc ác action</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- form footer -->
       </div>
     </div>
   </body>

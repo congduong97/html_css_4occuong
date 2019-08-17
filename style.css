@@ -47,7 +47,7 @@
   position: absolute;
   width: 230px;
   top: 52px;
-  left: 70px;
+  /* left: 70px;  */
   border-radius: 6px;
 }
 
@@ -55,11 +55,120 @@
   padding: 5px;
 }
 
-#main-nav .sub-nav li a {
-  border-radius: 6px;
-}
-
 #main-nav li:hover .sub-nav {
   display: block;
   cursor: pointer;
+}
+
+/* ========== Form styles ========= */
+.main-content {
+  margin-top: 100px;
+}
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+.btn-save {
+  color: white;
+  background: #0b12d9;
+}
+
+.btn-cancel {
+  background: white;
+}
+
+.create-new-job {
+  margin: auto 25px;
+}
+
+.create-new-job * {
+  font-size: 12px;
+}
+
+.btn-list {
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  border-radius: 4px;
+  background: #e9ebf0;
+  outline: none;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+  border: 2px solid #0b12d9;
+}
+
+select {
+  color: darkcyan;
+  border: none;
+  outline: none;
+  background: #d1cec5;
+  padding: 5px 15px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1);
+}
+
+table th,
+table td {
+  text-align: center;
+  padding: 10px;
+}
+
+.fa-trash-alt {
+  color: red;
+  padding-left: 10px;
+}
+
+.grey-ground {
+  background: #e9ebf0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.input-info {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+input.in-grey {
+  background: white;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: darkcyan;
+}
+
+.notice {
+  opacity: 0.6;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+.a {
+  /* display: flex;
+  width: 40%;
+
+  align-items: baseline; */
+  float: left;
+}
+
+.a::after {
+  content: "";
+  display: block;
+  clear: both;
 }
