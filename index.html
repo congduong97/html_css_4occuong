@@ -18,9 +18,11 @@
             <a>Quản lý công việc</a>
             <ul class="sub-nav">
               <li><a>Xem danh sách công việc</a></li>
-              <li><a>Tạo mới công việc</a></li>
+              <li>
+                <a>Tạo mới công việc</a>
+              </li>
               <li><a>Xem danh sách mẫu công việc</a></li>
-              <li><a>Tạo mẫu công việc</a></li>
+              <li><a id="toggle-modal">Tạo mẫu công việc</a></li>
             </ul>
           </li>
           <li><a>Quản lý nhóm</a></li>
@@ -30,50 +32,92 @@
       </nav>
 
       <!-- Main content -->
-      <div class="main-content">
+      <div class="modal main-content">
         <div class="create-new-job">
           <!-- Pop-up form -->
           <div class="btn-list">
             <button class="btn btn-save">Lưu</button>
             <button class="btn btn-cancel">Hủy</button>
-            <button class="btn btn-cancel">
+            <button class="btn btn-cancel close">
               <i class="fas fa-times-circle"></i>
             </button>
           </div>
-          <div>
+          <div class="input-wrapper">
             <div class="label required">Tên công việc</div>
             <div>
               <input type="text" placeholder="Công việc 1.2" size="30" />
             </div>
           </div>
-          <div>
+          <div class="input-wrapper">
             <div class="label">Mô tả</div>
             <div>
               <input
+                style="padding: 20px 0; padding-left:6px"
                 placeholder="What is important for people to know?"
                 type="text"
                 size="30"
               />
             </div>
+            <div class="tag">
+              <div>
+                Nhân viên phòng hành chính
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+              <div>
+                Nhân viên phòng DBCL
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+            </div>
           </div>
 
-          <div>
+          <div class="input-wrapper">
             <div class="label required">
               Những vị trị nhân viên có quyên xem mẫu này
             </div>
             <div><input type="text" placeholder="Nhân viên" size="30" /></div>
           </div>
-          <div>
+          <div class="input-wrapper">
             <div class="label required">Ngừơi thực hiện</div>
             <div><input type="text" placeholder="Đức" size="30" /></div>
+            <div class="tag">
+              <div>
+                Nguyễn Minh Đức
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+              <div>
+                Trần Đức Thủy
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+            </div>
           </div>
-          <div>
+          <div class="input-wrapper">
             <div class="label required">Người phê duyệt</div>
             <div><input type="text" placeholder="Nguyễn" size="30" /></div>
+            <div class="tag">
+              <div>
+                Nguyễn Minh Đức
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+              <div>
+                Trần Thanh Thùy
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+            </div>
           </div>
-          <div>
+          <div class="input-wrapper">
             <div class="label">Người quan sát</div>
             <div><input type="text" placeholder="Minh" size="30" /></div>
+            <div class="tag">
+              <div>
+                Nguyễn Minh Đức
+                <span class="xtag" onclick="closeTag(this)">x</span>
+              </div>
+              <div>
+                Trần Thanh Minh<span class="xtag" onclick="closeTag(this)"
+                  >x</span
+                >
+              </div>
+            </div>
           </div>
 
           <!-- Activity form -->
@@ -98,6 +142,7 @@
                   <div class="label">Mô tả</div>
                   <div>
                     <input
+                      style="padding: 20px 0; padding-left:6px"
                       placeholder="Nộp báo cáo tìm hiểu"
                       type="text"
                       class="in-grey"
@@ -112,7 +157,7 @@
                   <th>Tên hoạt động</th>
                   <th>Mô tả</th>
                   <th>Bất buộc</th>
-                  <th>hành động</th>
+                  <th>Hành động</th>
                 </tr>
                 <tr>
                   <td>1</td>
@@ -200,35 +245,40 @@
                   <div class="label">Mô tả</div>
                   <div>
                     <input
+                      style="padding: 20px 0; padding-left:6px;margin-left: -5px;"
                       placeholder="Số báo cáo nộp"
                       type="text"
                       class="in-grey"
                     />
                   </div>
-                  <button class="btn btn-save">Lưu</button>
                 </div>
                 <div class="row-input">
-                  <div>Kiểu dữ liệu</div>
-                  <select>
-                    <option value="vanban">Văn bản</option>
-                    <option value="so">Số</option>
-                    <option value="hinhanh">Hình ảnh</option>
-                  </select>
+                  <div class="label">Kiểu dữ liệu</div>
+                  <div>
+                    <select>
+                      <option value="vanban">Văn bản</option>
+                      <option value="so">Số</option>
+                      <option value="hinhanh">Hình ảnh</option>
+                    </select>
+                  </div>
+
                   <button class="btn btn-save">Lưu</button>
                 </div>
               </div>
               <table>
                 <tr>
                   <th>STT</th>
-                  <th>Tên hoạt động</th>
+                  <th>Tên trường thông tin</th>
                   <th>Mô tả</th>
+                  <th>Kiểu DL</th>
                   <th>Bất buộc</th>
-                  <th>hành động</th>
+                  <th>Hành động</th>
                 </tr>
                 <tr>
                   <td>1</td>
-                  <td>Hoạt động 1</td>
-                  <td>Hoạt động 1 - báo cáo</td>
+                  <td>Thông tin 1</td>
+                  <td>Thông tin 1 - Doanh số</td>
+                  <td>Số</td>
                   <td>Có</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -236,8 +286,9 @@
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Hoạt động 2</td>
-                  <td>Hoạt động 2 - báo cáo</td>
+                  <td>Thông tin 2</td>
+                  <td>Thông tin 2</td>
+                  <td>Số</td>
                   <td>Không</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -245,8 +296,9 @@
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>Hoạt động 3</td>
-                  <td>Hoạt động 3 - báo cáo</td>
+                  <td>Thông tin 3</td>
+                  <td>Thông tin 3</td>
+                  <td>Văn bản</td>
                   <td>Không</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -254,8 +306,9 @@
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td>Hoạt động 4</td>
-                  <td>Hoạt động 4 - báo cáo</td>
+                  <td>Thông tin 4</td>
+                  <td>Thông tin 4</td>
+                  <td>Văn bản</td>
                   <td>Có</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -263,8 +316,9 @@
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td>Hoạt động 5</td>
-                  <td>Hoạt động 5 - báo cáo</td>
+                  <td>Thông tin 5</td>
+                  <td>Thông tin 5</td>
+                  <td>Ngày tháng</td>
                   <td>Có</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -272,8 +326,9 @@
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td>Hoạt động 6</td>
-                  <td>Hoạt động 6 - báo cáo</td>
+                  <td>Thông tin 6</td>
+                  <td>Thông tin 6</td>
+                  <td>Ngày tháng</td>
                   <td>Có</td>
                   <td>
                     <i class="fas fa-pen"></i><i class="far fa-trash-alt"></i>
@@ -281,10 +336,12 @@
                 </tr>
               </table>
             </div>
-            <div>
+            <div class="last-input">
               <div class="label">Công thức tính điểm KPI công việc</div>
               <div>
                 <input
+                  style="padding: 20px 0;padding-left: 6px;"
+                  size="50"
                   type="text"
                   placeholder="100*(1 - (TT1/TT2) - (TT3/TT4) - (DO/D) - (AD/A))"
                 />
@@ -306,5 +363,6 @@
         <!-- form footer -->
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>

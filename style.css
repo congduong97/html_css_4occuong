@@ -61,15 +61,24 @@
 }
 
 /* ========== Form styles ========= */
-.main-content {
-  margin-top: 100px;
+.modal {
+  /* display: none;  */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10px; /* Location of the box */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 .btn {
   border: none;
   border-radius: 4px;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
+  height: 26px;
+  width: 40px;
   cursor: pointer;
-  display: inline-block;
+  display: block;
 }
 .btn-save {
   color: white;
@@ -80,9 +89,54 @@
   background: white;
 }
 
-.create-new-job {
-  margin: auto 25px;
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
+
+.create-new-job {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  overflow-y: scroll;
+  width: 40vw;
+  height: 80vh;
+  padding: 15px;
+  border-radius: 2px;
+}
+
+/* width */
+.create-new-job::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.create-new-job::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+.create-new-job::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
 
 .create-new-job * {
   font-size: 12px;
@@ -90,6 +144,8 @@
 
 .btn-list {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 input[type="text"] {
@@ -99,11 +155,11 @@ input[type="text"] {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 6px;
-  margin-bottom: 20px;
 }
 
 input[type="text"]:focus {
   border: 2px solid #0b12d9;
+  background: #ffffff;
 }
 
 select {
@@ -140,14 +196,60 @@ table td {
   padding-left: 15px;
 }
 
+.input-info div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+}
+
+.input-info div .btn {
+  align-self: flex-end;
+}
+
+.input-info div:first-child .label {
+  padding-right: 45px;
+}
+
+.input-info div:nth-child(2) .label {
+  padding-right: 15px;
+}
+.input-info div:nth-child(3) .label {
+  padding-right: 66px;
+}
+
+.input-info div:nth-child(3) .btn {
+  /* margin-top: -4px; */
+  margin-left: 50px;
+}
+
+.input-info div:nth-child(4) select {
+  margin-left: 25px;
+}
+
+.input-info div:nth-child(4) .btn {
+  margin-left: 150px;
+}
+
 input.in-grey {
   background: white;
+}
+
+.input-wrapper {
+  margin-bottom: 25px;
 }
 
 .label {
   margin-bottom: 6px;
   font-weight: 600;
   color: darkcyan;
+}
+.last-input {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.last-input input {
+  margin: 20px 0;
 }
 
 .notice {
@@ -159,16 +261,29 @@ input.in-grey {
   color: red;
 }
 
-.a {
-  /* display: flex;
-  width: 40%;
-
-  align-items: baseline; */
-  float: left;
+.tag {
+  /* display: flex; */
+  display: inline-flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.tag div {
+  padding: 2px;
+  color: darkcyan;
+  font-weight: 600;
+  background: #d1cec5;
+  border-radius: 4px;
+  padding: auto 6px;
 }
 
-.a::after {
-  content: "";
-  display: block;
-  clear: both;
+.tag div:first-of-type {
+  margin-right: 5px;
+}
+
+.xtag {
+  color: darkcyan;
+  font-weight: 600;
+  padding: auto 10px;
+  cursor: pointer;
+  font-size: 14px;
 }
